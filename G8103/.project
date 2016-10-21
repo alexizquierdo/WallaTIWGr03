@@ -5,6 +5,7 @@
 	<projects>
 		<project>G8103admon</project>
 		<project>G8103wallapop</project>
+		<project>G8103Database</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

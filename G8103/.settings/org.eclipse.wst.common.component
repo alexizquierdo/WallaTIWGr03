@@ -9,5 +9,8 @@
             <dependent-object/>
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="G8103Database.jar" deploy-path="/lib" handle="module:/resource/G8103Database/G8103Database">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
     </wb-module>
 </project-modules>

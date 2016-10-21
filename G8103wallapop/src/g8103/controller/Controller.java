@@ -1,4 +1,4 @@
-package es.wallapop.servlets;
+package g8103.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
