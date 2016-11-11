@@ -3,6 +3,7 @@
 	<name>G8103wallapop</name>
 	<comment></comment>
 	<projects>
+		<project>G8103Database</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
