@@ -11,8 +11,8 @@ import java.util.List;
  */
 @Entity
 @Table(name="ciudades")
-@NamedQuery(name="Ciudade.findAll", query="SELECT c FROM Ciudade c")
-public class Ciudade implements Serializable {
+@NamedQuery(name="Ciudade.findAll", query="SELECT c FROM Ciudades c")
+public class Ciudades implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -21,10 +21,10 @@ public class Ciudade implements Serializable {
 	private String nombre;
 
 	//bi-directional many-to-one association to Usuario
-	@OneToMany(mappedBy="ciudade")
+	@OneToMany(mappedBy="ciudades")
 	private List<Usuario> usuarios;
 
-	public Ciudade() {
+	public Ciudades() {
 	}
 
 	public int getIdciudad() {

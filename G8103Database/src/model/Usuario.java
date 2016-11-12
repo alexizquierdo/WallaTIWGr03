@@ -30,7 +30,7 @@ public class Usuario implements Serializable {
 	//bi-directional many-to-one association to Ciudade
 	@ManyToOne
 	@JoinColumn(name="ciudad")
-	private Ciudade ciudade;
+	private Ciudades ciudades;
 
 	public Usuario() {
 	}
@@ -89,12 +89,12 @@ public class Usuario implements Serializable {
 		return producto;
 	}
 
-	public Ciudade getCiudade() {
-		return this.ciudade;
+	public Ciudades getCiudade() {
+		return this.ciudades;
 	}
 
-	public void setCiudade(Ciudade ciudade) {
-		this.ciudade = ciudade;
+	public void setCiudade(Ciudades ciudades) {
+		this.ciudades = ciudades;
 	}
 
 }

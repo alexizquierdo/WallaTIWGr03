@@ -3,7 +3,7 @@
 	<persistence-unit name="G8103Database">
 		<class>model.Administrador</class>
 		<class>model.Categoria</class>
-		<class>model.Ciudade</class>
+		<class>model.Ciudades</class>
 		<class>model.Producto</class>
 		<class>model.Usuario</class>
 	</persistence-unit>

@@ -13,7 +13,7 @@
 
 		<div>
 			<ul class="form-header">
-				<li><label for="login"><i class="fa fa-lock"></i> LOGIN<label for="login"></li>
+				<li><label for="login"><i class="fa fa-lock"></i> LOGIN</label></li>
 				<li><label for="signup"><i class="fa fa-credit-card"></i> REGISTER</label></li>
 			</ul>
 		</div>
@@ -21,7 +21,7 @@
 		<div class="section-out">
 			<section class="login-section">
 				<div class="login">
-					<form action="">
+					<form name="login" method="POST" action="G8103wallapop/Controller">
 						<ul class="ul-list">
 							<li><input type="email" required class="input"
 								placeholder="Email" /><span class="icon"><i
@@ -41,7 +41,7 @@
 
 			<section class="signup-section">
 				<div class="login">
-					<form action="">
+					<form name="register" method="POST" action="G8103wallapop/Controller">
 						<ul class="ul-list">
 							<li><input type="email" required class="input"
 								placeholder="Email" /><span class="icon"><i
@@ -49,6 +49,12 @@
 							<li><input type="password" required class="input"
 								placeholder="Contraseña" /><span class="icon"><i
 									class="fa fa-lock"></i></span></li>
+									<li><input type="nombre" required class="input"
+								placeholder="Nombre" /></li>
+									<li><input type="apellidos" required class="input"
+								placeholder="Apellidos" /></li>
+									<li><input type="ciudad" required class="input"
+								placeholder="Ciudad" /></li>
 							<li>
 								<input type="checkbox" id="check1"> 
 								<label for="check1">I accept terms and conditions</label>
