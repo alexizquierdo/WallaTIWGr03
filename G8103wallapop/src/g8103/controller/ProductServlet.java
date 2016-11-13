@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import g8103.datos.UsuarioController;
 import g8103.negocio.AdminController;
@@ -19,13 +18,13 @@ import model.Usuario;
  * Servlet implementation class Controller
  */
 @WebServlet("/Controller")
-public class ControllerServlet extends HttpServlet {
+public class ProductServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public ControllerServlet() {
+	public ProductServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -47,11 +46,16 @@ public class ControllerServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("entrando en servlet");
-		String user = request.getParameter("user");
-		String pwd = request.getParameter("pwd");
-		String name = request.getParameter("nombre");
-		// Búsqueda administrador
-	
+		// HttpSession sesion = request.getSession();
+		
+		String nombre = request.getParameter("nombreProducto");
+		String precio = request.getParameter("precioProducto");
+		String categoria = request.getParameter("categoriaProducto");
+		String descripcion = request.getParameter("descripcionProducto");
+		String estado = request.getParameter("estadoProducto");
+
+		
+		
 		AdminController _admin = new AdminController("G8103Database");
 		Administrador admin = _admin.findAdminByMail(user);
 		if (admin != null) {
@@ -61,9 +65,8 @@ public class ControllerServlet extends HttpServlet {
 				if (admin.getPassword().equals(pwd)) {
 					System.out.println("Contraseña correcta");
 					//Redirigir página administración
-					HttpSession sesion = request.getSession(true);
-					sesion.setAttribute(user, "Administrador");
-					response.sendRedirect("http://localhost:8080/G8103admon/");
+					RequestDispatcher miR = request.getRequestDispatcher("G8103admon/WebContent/admin.jsp");
+					miR.forward(request, response);
 				} else {
 					System.out.println("Contraseña incorrecta");
 					RequestDispatcher miR = request.getRequestDispatcher("/logg.jsp");
@@ -97,8 +100,6 @@ public class ControllerServlet extends HttpServlet {
 				if (name == null) {
 					if (usuario.getPassword().equals(pwd)) {
 						System.out.println("Contraseña correcta");
-						HttpSession sesion = request.getSession();
-						sesion.setAttribute(user, usuario.getNombre());
 						RequestDispatcher miR = request.getRequestDispatcher("/index.jsp");
 						miR.forward(request, response);
 

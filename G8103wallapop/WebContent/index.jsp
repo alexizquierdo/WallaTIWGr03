@@ -15,9 +15,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <ol class="carousel-indicators slide-indicators">
-                                <li data-target="#slide-list" data-slide-to="0" class="active"></li>
-                                <li data-target="#slide-list" data-slide-to="1"></li>
+                                <li data-target="#slide-list" data-slide-to="1" class="active"></li>
                                 <li data-target="#slide-list" data-slide-to="2"></li>
+                                <li data-target="#slide-list" data-slide-to="3"></li>
                             </ol>                            
                         </div>
                     </div>
