@@ -5,10 +5,20 @@
 				<div class="header-right">
 					<ul class="list-unstyled list-inline">
 						<!-- if currentUser show these -->
-						<li><a href="#"><i class="fa fa-user"></i> Perfil</a></li>
-						<li><a href="#"><i class="fa fa-heart"></i> Favoritos</a></li>
-						<!-- ######################### -->
-						<li><a href="logg.jsp"><i class="fa fa-user"></i> Acceso</a></li>
+						<li><a href="http://localhost:8080/G8103wallapop"><i class="fa fa-user"></i> Salir</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><div class="header-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 pull-right">
+				<div class="header-right">
+					<ul class="list-unstyled list-inline">
+						<!-- if currentUser show these -->
+						
 					</ul>
 				</div>
 			</div>
@@ -46,9 +56,9 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="index.jsp">Inicio</a></li>
-					<li><a href="shop.jsp">Productos</a></li>
-					<li><a href="contact.jsp">Contacto</a></li>
+					<li><a href="users.jsp">Usuarios</a></li>
+					<li class="active"><a href="shop.jsp">Productos</a></li>
+					<li><a href="admin.jsp">Administradores</a></li>
 				</ul>
 			</div>
 		</div>

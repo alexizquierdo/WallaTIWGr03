@@ -1,62 +1,6 @@
 <div class="footer-top-area">
 	<div class="zigzag-bottom"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 col-sm-6">
-				<div class="footer-about-us">
-					<h2>
-						WallaTIW
-					</h2>
-					<p>WallaTIW es una forma f&aacute;cil de adquirir o vender productos de segunda mano que ya no utilizas para conseguir sacar un dinerillo. Encuentra lo que estás buscando y paga mucho menos por él.</p>
-					<div class="footer-social">
-						<a href="#" target="_blank"><i class="fa fa-facebook"></i></a> <a
-							href="#" target="_blank"><i class="fa fa-twitter"></i></a> <a
-							href="#" target="_blank"><i class="fa fa-youtube"></i></a> <a
-							href="#" target="_blank"><i class="fa fa-linkedin"></i></a> <a
-							href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-3 col-sm-6">
-				<div class="footer-menu">
-					<h2 class="footer-wid-title">Mapa del sitio</h2>
-					<ul>
-						<li><a href="shop.jsp">Productos</a></li>
-						<li><a href="contact.jsp">Contacto</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="col-md-3 col-sm-6">
-				<div class="footer-menu">
-					<h2 class="footer-wid-title">Autores</h2>
-					<ul>
-						<li><a href="#">Javier Fern&aacute;ndez de Cara</a></li>
-						<li><a href="#">Alejandro Izquierdo Bl&aacute;zquez</a></li>
-						<li><a href="#">Luc&iacute;a Perona Miguez</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="col-md-3 col-sm-6">
-				<div class="footer-newsletter">
-					<h2 class="footer-wid-title">Newsletter</h2>
-					<p>&iexcl;Subscr&iacute;bete a nuestro bolet&iacute;n informativo y
-						recibe notificaciones de los &uacute;ltimos cursos y promociones!</p>
-					<div class="newsletter-form">
-						<form action="#">
-							<input type="email" placeholder="Ingresa tu email"> <input
-								type="submit" value="Enviar">
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- End footer top area -->
-
+	
 <div class="footer-bottom-area">
 	<div class="container">
 		<div class="row">

@@ -4,7 +4,6 @@
     <%@include file="head.jsp" %>
   </head>
   <body>
-   	<%@include file="header.jsp" %>
    	
    	<div class="slider-area">
         <div class="zigzag-bottom"></div>
@@ -35,7 +34,7 @@
                                             <div class="slide-content">
                                                 <h2>Vaya, algo ha ido mal...</h2>
                                                 <p>Lamentamos las molestias, estamos trabajando en arreglar todo</p>
-						                        <a href="index.jsp" class="readmore">Volver a página principal</a>
+						                        <a href="admin.jsp" class="readmore">Volver a página principal</a>
                                             </div>
                                         </div>
                                     </div>

@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import g8103.datos.UsuarioController;
 import g8103.negocio.AdminController;
@@ -46,7 +47,6 @@ public class ControllerServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("entrando en servlet");
-		// HttpSession sesion = request.getSession();
 		String user = request.getParameter("user");
 		String pwd = request.getParameter("pwd");
 		String name = request.getParameter("nombre");
@@ -61,6 +61,8 @@ public class ControllerServlet extends HttpServlet {
 				if (admin.getPassword().equals(pwd)) {
 					System.out.println("Contraseña correcta");
 					//Redirigir página administración
+					HttpSession sesion = request.getSession(true);
+					sesion.setAttribute(user, "Administrador");
 					response.sendRedirect("http://localhost:8080/G8103admon/");
 				} else {
 					System.out.println("Contraseña incorrecta");
@@ -95,6 +97,8 @@ public class ControllerServlet extends HttpServlet {
 				if (name == null) {
 					if (usuario.getPassword().equals(pwd)) {
 						System.out.println("Contraseña correcta");
+						HttpSession sesion = request.getSession();
+						sesion.setAttribute(user, usuario.getNombre());
 						RequestDispatcher miR = request.getRequestDispatcher("/index.jsp");
 						miR.forward(request, response);
 
