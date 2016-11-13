@@ -1,6 +1,6 @@
 <div class="col-md-4">
 	<div class="single-sidebar">
-		<h2 class="sidebar-title">Buscar Cursos</h2>
+		<h2 class="sidebar-title">Buscar Curso</h2>
 		<form action="#">
 			<input type="text" placeholder="Buscar cursos..."> <input
 				type="submit" value="Buscar">
