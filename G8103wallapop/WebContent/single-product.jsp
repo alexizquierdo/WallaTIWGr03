@@ -30,31 +30,30 @@
                     <div class="product-content-right">
                         <div class="product-breadcroumb">
                             <a href="index.jsp">Home</a>
-                            <a href="">Cursos</a>
-                            <a href="single-product.jsp">Curso Office 2015</a>
+                            <a href="">Coches</a>
+                            <a href="single-product.jsp">Hyundai Trajet Diesel 7 plazas</a>
                         </div>
                         
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="product-images">
                                     <div class="product-main-img">
-                                        <img src="img/producto-5.jpg" alt="">
-                                    </div>
-                                    
+                                        <img src="img/producto-7.jpg" alt="">
+                                    </div>                    
                                     <div class="product-gallery">
-                                        <img src="img/word.jpg" alt="">
-                                        <img src="img/excel.jpg" alt="">
-                                        <img src="img/power.jpg" alt="">
-                                        <img src="img/access.jpg" alt="">
+                                        <img src="img/trajet1.jpg" alt="">
+                                        <img src="img/trajet2.jpg" alt="">
+                                        <img src="img/trajet3.jpg" alt="">
+                                        <img src="img/trajet4.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="col-sm-6">
                                 <div class="product-inner">
-                                    <h2 class="product-name">Curso Office 2015</h2>
+                                    <h2 class="product-name">Hyundai Trajet Diesel 7 plazas</h2>
                                     <div class="product-inner-price">
-                                        <ins>349&euro;</ins> <del>599&euro;</del>
+                                        <ins>300&euro;</ins> <del>3500&euro;</del>
                                     </div>    
                                     
                                     <div role="tabpanel">
@@ -102,48 +101,19 @@
                             <div class="related-products-carousel">
                                 <div class="single-product">
                                     <div class="product-f-image">
-                                        <img src="img/product-1.jpg" alt="">
+                                        <img src="img/producto-4.jpg" alt="">
                                         <div class="product-hover">
                                             <a href="cart.jsp" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> A&ntilde;adir</a>
                                             <a href="single-product.jsp" class="view-details-link"><i class="fa fa-link"></i> Ver detalles</a>
                                         </div>
                                     </div>
 
-                                    <h2><a href="single-product.jsp">Curso HTML5 + CSS3 + JS</a></h2>
+                                    <h2><a href="single-product.jsp">Seat Ibiza 1997 Azul</a></h2>
 
                                     <div class="product-carousel-price">
-                                        <ins>349&euro;</ins> <del>549&euro;</del>
+                                        <ins>900&euro;</ins> <del>100&euro;</del>
                                     </div> 
-                                </div>
-                                <div class="single-product">
-                                    <div class="product-f-image">
-                                        <img src="img/producto-2.jpg" alt="">
-                                        <div class="product-hover">
-                                            <a href="cart.jsp" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> A&ntilde;adir</a>
-                                            <a href="single-product.jsp" class="view-details-link"><i class="fa fa-link"></i> Ver detalles</a>
-                                        </div>
-                                    </div>
-
-                                    <h2><a href="single-product.jsp">Curso Android</a></h2>
-                                    <div class="product-carousel-price">
-                                        <ins>50&euro;</ins>
-                                    </div> 
-                                </div>
-                                <div class="single-product">
-                                    <div class="product-f-image">
-                                        <img src="img/producto-6.jpg" alt="">
-                                        <div class="product-hover">
-                                            <a href="cart.jsp" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> A&ntilde;adir</a>
-                                            <a href="single-product.jsp" class="view-details-link"><i class="fa fa-link"></i> Ver detalles</a>
-                                        </div>
-                                    </div>
-
-                                    <h2><a href="single-product.jsp">Curso animaci&oacute;n 3D</a></h2>
-
-                                    <div class="product-carousel-price">
-                                        <ins>400&euro;</ins>
-                                    </div>                                 
-                                </div>                                    
+                                </div>   
                             </div>
                         </div>
                     </div>                    
