@@ -1,6 +1,7 @@
 package g8103.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -50,49 +51,56 @@ public class ControllerServlet extends HttpServlet {
 		String user = request.getParameter("user");
 		String pwd = request.getParameter("pwd");
 		String name = request.getParameter("nombre");
-		// Búsqueda administrador
-	
+		PrintWriter out = response.getWriter();
+
 		AdminController _admin = new AdminController("G8103Database");
 		Administrador admin = _admin.findAdminByMail(user);
 		if (admin != null) {
 			System.out.println("Administrador encontrado");
 			if (name == null) {
-				// Redirigir página administrador
 				if (admin.getPassword().equals(pwd)) {
 					System.out.println("Contraseña correcta");
-					//Redirigir página administración
 					HttpSession sesion = request.getSession(true);
 					sesion.setAttribute(user, "Administrador");
 					response.sendRedirect("http://localhost:8080/G8103admon/");
 				} else {
 					System.out.println("Contraseña incorrecta");
-					RequestDispatcher miR = request.getRequestDispatcher("/logg.jsp");
-					miR.forward(request, response);
+					out.println("<script type=\"text/javascript\">");
+					out.println("alert('Contraseña incorrecta');");
+					out.println("</script>");
+					response.sendRedirect("logg.jsp");
 				}
 			} else {
 				System.out.println("Usuario ya existente");
-				RequestDispatcher miR = request.getRequestDispatcher("/logg.jsp");
-				miR.forward(request, response);
+				out.println("<script type=\"text/javascript\">");
+				out.println("alert('El usuario ya existe');");
+				out.println("</script>");
+				response.sendRedirect("logg.jsp");
 			}
 		} else {
-
-			// Búsqueda usuario normal
 
 			UsuarioController _usuario = new UsuarioController("G8103Database");
 			Usuario usuario = _usuario.findUsuarioByMail(user);
 
 			if (usuario == null) {
+				if (pwd.equals(request.getParameter("pwd2"))) {
+					String apellidos = request.getParameter("apellidos");
+					int ciudad = Integer.parseInt(request.getParameter("ciudad"));
+					Usuario newUser = new Usuario(user, pwd, name, apellidos, ciudad);
 
-				String apellidos = request.getParameter("apellidos");
-				int ciudad = Integer.parseInt(request.getParameter("ciudad"));
-				Usuario newUser = new Usuario(user, pwd, name, apellidos, ciudad);
+					// Añadir usuario a base de datos
 
-				// Añadir usuario a base de datos
+					_usuario.createUsuario(newUser);
 
-				_usuario.createUsuario(newUser);
-
-				RequestDispatcher miR = request.getRequestDispatcher("/index.jsp");
-				miR.forward(request, response);
+					RequestDispatcher miR = request.getRequestDispatcher("/index.jsp");
+					miR.forward(request, response);
+				} else {
+					System.out.println("Las contraseñas no coinciden");
+					out.println("<script type=\"text/javascript\">");
+					out.println("alert('Las contraseñas no coinciden');");
+					out.println("</script>");
+					response.sendRedirect("logg.jsp");
+				}
 			} else {
 				if (name == null) {
 					if (usuario.getPassword().equals(pwd)) {
@@ -104,15 +112,19 @@ public class ControllerServlet extends HttpServlet {
 
 					} else {
 						System.out.println("Contraseña incorrecta");
-						RequestDispatcher miR = request.getRequestDispatcher("/logg.jsp");
-						miR.forward(request, response);
+						out.println("<script type=\"text/javascript\">");
+						out.println("alert('Contraseña incorrecta');");
+						out.println("</script>");
+						response.sendRedirect("logg.jsp");
 					}
 					RequestDispatcher miR = request.getRequestDispatcher("/logg.jsp");
 					miR.forward(request, response);
 				} else {
 					System.out.println("Usuario ya existente");
-					RequestDispatcher miR = request.getRequestDispatcher("/logg.jsp");
-					miR.forward(request, response);
+					out.println("<script type=\"text/javascript\">");
+					out.println("alert('El usuario ya existe');");
+					out.println("</script>");
+					response.sendRedirect("logg.jsp");
 				}
 			}
 		}

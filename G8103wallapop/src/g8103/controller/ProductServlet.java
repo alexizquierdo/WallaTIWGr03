@@ -9,10 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import g8103.datos.UsuarioController;
-import g8103.negocio.AdminController;
-import model.Administrador;
-import model.Usuario;
+import g8103.datos.ProductoController;
+import model.Producto;
 
 /**
  * Servlet implementation class Controller
@@ -47,75 +45,26 @@ public class ProductServlet extends HttpServlet {
 			throws ServletException, IOException {
 		System.out.println("entrando en servlet");
 		// HttpSession sesion = request.getSession();
-		
+
 		String nombre = request.getParameter("nombreProducto");
 		String precio = request.getParameter("precioProducto");
-		String categoria = request.getParameter("categoriaProducto");
+		int categoria = Integer.parseInt(request.getParameter("categoriaProducto"));
 		String descripcion = request.getParameter("descripcionProducto");
-		String estado = request.getParameter("estadoProducto");
+		int estado = Integer.parseInt(request.getParameter("estadoProducto"));
 
-		
-		
-		AdminController _admin = new AdminController("G8103Database");
-		Administrador admin = _admin.findAdminByMail(user);
-		if (admin != null) {
-			System.out.println("Administrador encontrado");
-			if (name == null) {
-				// Redirigir página administrador
-				if (admin.getPassword().equals(pwd)) {
-					System.out.println("Contraseña correcta");
-					//Redirigir página administración
-					RequestDispatcher miR = request.getRequestDispatcher("G8103admon/WebContent/admin.jsp");
-					miR.forward(request, response);
-				} else {
-					System.out.println("Contraseña incorrecta");
-					RequestDispatcher miR = request.getRequestDispatcher("/logg.jsp");
-					miR.forward(request, response);
-				}
-			} else {
-				System.out.println("Usuario ya existente");
-				RequestDispatcher miR = request.getRequestDispatcher("/logg.jsp");
-				miR.forward(request, response);
-			}
-		} else {
+		ProductoController _producto = new ProductoController("G8103Database");
+		Producto producto = new Producto();
 
-			// Búsqueda usuario normal
+		producto.setNombre(nombre);
+		producto.setPrecio(precio);
+		producto.setDescripcion(descripcion);
 
-			UsuarioController _usuario = new UsuarioController("G8103Database");
-			Usuario usuario = _usuario.findUsuarioByMail(user);
+		// Añadir usuario a base de datos
 
-			if (usuario == null) {
+		_producto.createProducto(producto);
 
-				String apellidos = request.getParameter("apellidos");
-				int ciudad = Integer.parseInt(request.getParameter("ciudad"));
-				Usuario newUser = new Usuario(user, pwd, name, apellidos, ciudad);
+		RequestDispatcher miR = request.getRequestDispatcher("/index.jsp");
+		miR.forward(request, response);
 
-				// Añadir usuario a base de datos
-
-				_usuario.createUsuario(newUser);
-
-				RequestDispatcher miR = request.getRequestDispatcher("/index.jsp");
-				miR.forward(request, response);
-			} else {
-				if (name == null) {
-					if (usuario.getPassword().equals(pwd)) {
-						System.out.println("Contraseña correcta");
-						RequestDispatcher miR = request.getRequestDispatcher("/index.jsp");
-						miR.forward(request, response);
-
-					} else {
-						System.out.println("Contraseña incorrecta");
-						RequestDispatcher miR = request.getRequestDispatcher("/logg.jsp");
-						miR.forward(request, response);
-					}
-					RequestDispatcher miR = request.getRequestDispatcher("/logg.jsp");
-					miR.forward(request, response);
-				} else {
-					System.out.println("Usuario ya existente");
-					RequestDispatcher miR = request.getRequestDispatcher("/logg.jsp");
-					miR.forward(request, response);
-				}
-			}
-		}
 	}
 }

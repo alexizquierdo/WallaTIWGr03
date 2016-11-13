@@ -49,6 +49,9 @@
 							<li><input type="password" required class="input"
 								placeholder="Contraseña" name="pwd"/><span class="icon"><i
 									class="fa fa-lock"></i></span></li>
+									<li><input type="password" required class="input"
+								placeholder="Repita contraseña" name="pwd2"/><span class="icon"><i
+									class="fa fa-lock"></i></span></li>
 									<li><input required class="input"
 								placeholder="Nombre" name="nombre" /></li>
 									<li><input required class="input"
