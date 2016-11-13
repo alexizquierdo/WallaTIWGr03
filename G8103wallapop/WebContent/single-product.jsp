@@ -23,7 +23,9 @@
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
-            <div class="row">  
+            <div class="row">
+                <%@include file="single-sidebar.jsp"%>
+                
                 <div class="col-md-8">
                     <div class="product-content-right">
                         <div class="product-breadcroumb">
