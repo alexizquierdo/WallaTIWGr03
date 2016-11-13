@@ -14,6 +14,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/G8103Database"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/G8103admon"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

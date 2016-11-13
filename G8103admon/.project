@@ -3,7 +3,9 @@
 	<name>G8103admon</name>
 	<comment></comment>
 	<projects>
+		<project>G8103</project>
 		<project>G8103Database</project>
+		<project>G8103wallapop</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
