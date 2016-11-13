@@ -35,11 +35,23 @@ public class ControllerServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession sesion = request.getSession();
-		if(sesion.getAttribute("")!=null){
-			
-			
+		System.out.println("entrando en servlet");
+		//HttpSession sesion = request.getSession();
+		String user = request.getParameter("user");
+		String pwd = request.getParameter("pwd");
+		//Buscar en la base de datos de administracion
+		//Buscar en la base de datos de usuarios
+		String name = request.getParameter("nombre");
+		if (name != null){
+			String apellidos = request.getParameter("apellidos");
+			String ciudad = request.getParameter("ciudad");
+			//Añadir usuario a base de datos
 		}
+		//Devolver control a index.jsp
+		
+			
+			
+		
 	}
 
 }

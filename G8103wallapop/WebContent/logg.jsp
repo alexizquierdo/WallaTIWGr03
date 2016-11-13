@@ -21,19 +21,19 @@
 		<div class="section-out">
 			<section class="login-section">
 				<div class="login">
-					<form name="login" method="POST" action="G8103wallapop/Controller">
+					<form name="login" method="POST" action="ControllerServlet">
 						<ul class="ul-list">
 							<li><input type="email" required class="input"
-								placeholder="Email" /><span class="icon"><i
+								placeholder="Email" name="user" /><span class="icon"><i
 									class="fa fa-user"></i></span></li>
 							<li><input type="password" required class="input"
-								placeholder="Contraseña" /><span class="icon"><i
+								placeholder="Contraseña" name="pwd"/><span class="icon"><i
 									class="fa fa-lock"></i></span></li>
 							<li>
 								<span class="remember"><input type="checkbox" id="check"> 
 								<label for="check">Recordarme</label></span>
 							</li>
-							<li><input type="submit" value="ENTRAR" class="btn"></li>
+							<li><input type="submit" value="ENTRAR"></li>
 						</ul>
 					</form>
 				</div>
@@ -41,22 +41,22 @@
 
 			<section class="signup-section">
 				<div class="login">
-					<form name="register" method="POST" action="G8103wallapop/Controller">
+					<form name="register" method="POST" action="ControllerServlet">
 						<ul class="ul-list">
 							<li><input type="email" required class="input"
-								placeholder="Email" /><span class="icon"><i
+								placeholder="Email" name="user"/><span class="icon"><i
 									class="fa fa-user"></i></span></li>
 							<li><input type="password" required class="input"
-								placeholder="Contraseña" /><span class="icon"><i
+								placeholder="Contraseña" name="pwd"/><span class="icon"><i
 									class="fa fa-lock"></i></span></li>
 									<li><input type="nombre" required class="input"
-								placeholder="Nombre" /></li>
+								placeholder="Nombre" name="nombre" /></li>
 									<li><input type="apellidos" required class="input"
-								placeholder="Apellidos" /></li>
+								placeholder="Apellidos" name="apellidos" /></li>
 									<li><input type="ciudad" required class="input"
-								placeholder="Ciudad" /></li>
+								placeholder="Ciudad" name="ciudad"/></li>
 							<li>
-								<input type="checkbox" id="check1"> 
+								<input type="checkbox" id="check1" name="terminos"> 
 								<label for="check1">I accept terms and conditions</label>
 							</li>
 							<li><input type="submit" value="ACEPTAR" class="btn"></li>

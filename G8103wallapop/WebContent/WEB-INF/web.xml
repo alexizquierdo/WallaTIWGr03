@@ -3,18 +3,16 @@
 <web-app id="wallaTIW">
  <display-name>WallaTIW</display-name>
  <servlet>
-		<servlet-name>Controller</servlet-name>
-		<display-name>Controller</display-name>
+		<servlet-name>ControllerServlet</servlet-name>
+		<display-name>ControllerServlet</display-name>
 		<servlet-class>g8103.controller.ControllerServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ControllerServlet</servlet-name>
 		<url-pattern>
-		/controller</url-pattern>
+		/ControllerServlet</url-pattern>
 	</servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  
-	
 </web-app>
