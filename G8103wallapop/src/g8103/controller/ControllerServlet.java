@@ -60,7 +60,9 @@ public class ControllerServlet extends HttpServlet {
 				// Redirigir página administrador
 				if (admin.getPassword().equals(pwd)) {
 					System.out.println("Contraseña correcta");
-
+					//Redirigir página administración
+					RequestDispatcher miR = request.getRequestDispatcher("G8103admon/WebContent/admin.jsp");
+					miR.forward(request, response);
 				} else {
 					System.out.println("Contraseña incorrecta");
 					RequestDispatcher miR = request.getRequestDispatcher("/logg.jsp");
@@ -110,8 +112,6 @@ public class ControllerServlet extends HttpServlet {
 					miR.forward(request, response);
 				}
 			}
-
 		}
 	}
-
 }

@@ -49,9 +49,9 @@
 							<li><input type="password" required class="input"
 								placeholder="Contraseña" name="pwd"/><span class="icon"><i
 									class="fa fa-lock"></i></span></li>
-									<li><input type="nombre" required class="input"
+									<li><input required class="input"
 								placeholder="Nombre" name="nombre" /></li>
-									<li><input type="apellidos" required class="input"
+									<li><input required class="input"
 								placeholder="Apellidos" name="apellidos" /></li>
 									<li>Ciudad</li>
 									<li><select name="ciudad">
