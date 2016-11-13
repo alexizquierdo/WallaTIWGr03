@@ -1,5 +1,4 @@
 <div class="footer-top-area">
-	<div class="zigzag-bottom"></div>
 	
 <div class="footer-bottom-area">
 	<div class="container">
@@ -14,12 +13,6 @@
 				</div>
 			</div>
 
-			<div class="col-md-4">
-				<div class="footer-card-icon">
-					<i class="fa fa-cc-discover"></i> <i class="fa fa-cc-mastercard"></i>
-					<i class="fa fa-cc-paypal"></i> <i class="fa fa-cc-visa"></i>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>
