@@ -26,7 +26,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img src="img/product-1.jpg" alt="">
+                            <img src="img/producto-1.jpg" alt="">
                         </div>
                         <h2><a href="single-product.jsp">Bicicleta de Paseo</a></h2>
                         <div class="product-carousel-price">
@@ -38,7 +38,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img src="img/product-2.jpg" alt="">
+                            <img src="img/producto-2.jpg" alt="">
                         </div>
                         <h2><a href="single-product.jsp">Colgante hecho con botones</a></h2>
                         <div class="product-carousel-price">
@@ -50,7 +50,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img src="img/product-3.jpg" alt="">
+                            <img src="img/producto-3.jpg" alt="">
                         </div>
                         <h2><a href="single-product.jsp">Bicicleta plegable el&eacute;ctrica</a></h2>
                         <div class="product-carousel-price">
@@ -62,7 +62,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img src="img/product-4.jpg" alt="">
+                            <img src="img/producto-4.jpg" alt="">
                         </div>
                         <h2><a href="single-product.jsp">Seat Ibiza 1997 Azul</a></h2>
                         <div class="product-carousel-price">
@@ -75,7 +75,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img src="img/product-5.jpg" alt="">
+                            <img src="img/producto-5.jpg" alt="">
                         </div>
                         <h2><a href="single-product.jsp">Pulsera abalorios multicolor</a></h2>
                         <div class="product-carousel-price">
@@ -88,7 +88,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img src="img/product-6.jpg" alt="">
+                            <img src="img/producto-6.jpg" alt="">
                         </div>
                         <h2><a href="single-product.jsp">Conjunto pendientes y anillo</a></h2>
                         <div class="product-carousel-price">
@@ -101,7 +101,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img src="img/product-7.jpg" alt="">
+                            <img src="img/producto-7.jpg" alt="">
                         </div>
                         <h2><a href="single-product.jsp">Hyundai Trajet Diesel 7 plazas</a></h2>
                         <div class="product-carousel-price">

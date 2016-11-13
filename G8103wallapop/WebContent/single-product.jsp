@@ -38,7 +38,7 @@
                             <div class="col-sm-6">
                                 <div class="product-images">
                                     <div class="product-main-img">
-                                        <img src="img/product-5.jpg" alt="">
+                                        <img src="img/producto-5.jpg" alt="">
                                     </div>
                                     
                                     <div class="product-gallery">
@@ -117,7 +117,7 @@
                                 </div>
                                 <div class="single-product">
                                     <div class="product-f-image">
-                                        <img src="img/product-2.jpg" alt="">
+                                        <img src="img/producto-2.jpg" alt="">
                                         <div class="product-hover">
                                             <a href="cart.jsp" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> A&ntilde;adir</a>
                                             <a href="single-product.jsp" class="view-details-link"><i class="fa fa-link"></i> Ver detalles</a>
@@ -131,7 +131,7 @@
                                 </div>
                                 <div class="single-product">
                                     <div class="product-f-image">
-                                        <img src="img/product-6.jpg" alt="">
+                                        <img src="img/producto-6.jpg" alt="">
                                         <div class="product-hover">
                                             <a href="cart.jsp" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> A&ntilde;adir</a>
                                             <a href="single-product.jsp" class="view-details-link"><i class="fa fa-link"></i> Ver detalles</a>
