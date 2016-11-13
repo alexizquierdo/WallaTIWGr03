@@ -1,4 +1,4 @@
-package g8103.negocio;
+package g8103.datos;
 
 import java.util.List;
 
@@ -9,23 +9,26 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
-import model.Administrador;
+import model.Producto;
 
 
 /*https://docs.oracle.com/javaee/6/tutorial/doc/bnbrg.html
 Listado de Querys a utilizar*/
 @NamedQueries({
-		@NamedQuery(name = "Administrador.findAll", query = "SELECT c FROM Administrador c"), })
+		@NamedQuery(name = "Producto.findAll", query = "SELECT c FROM Producto c"), 
+		@NamedQuery(name = "Producto.findByCategory", query = "SELECT c FROM Producto c WHERE c.categoria = :_varCat"),
+		@NamedQuery(name = "Producto.findByState", query = "SELECT c FROM Producto c WHERE c.estado = :_varCat"),})
+
 
 @SuppressWarnings("unchecked")
 
-public class AdminController {
+public class ProductoController {
 
 	private String _unidadPersistencia;
 	private EntityManager _em;
-	private List<Administrador> _listaAdmins = null;
+	private List<Producto> _listaProductos = null;
 
-	public AdminController(String unidadPersistencia) {
+	public ProductoController(String unidadPersistencia) {
 
 		this._unidadPersistencia = unidadPersistencia;
 	}
@@ -39,39 +42,42 @@ public class AdminController {
 
 	}
 
-	public Administrador findAdminByMail(String mail) {
-
-		Administrador admin = null;
-		proxyCreateEntityManager();
-
-		try {
-			admin = _em.find(Administrador.class, mail);
-		} finally {
-			_em.close();
-		}
-		return admin;
-	}
-
-	public List<Administrador> findAdmin() {
+	public List<Producto> findProductoPorCategoria(int categoria) {
 
 		try {
 			proxyCreateEntityManager();
-			Query query = _em.createNamedQuery("Persona.findAll",Administrador.class);
+			Query query = _em.createNamedQuery("Producto.findByCategory",Producto.class);
+			query.setParameter("_varCat", categoria);
 			query.setMaxResults(5);
-			_listaAdmins = query.getResultList();
+			_listaProductos = query.getResultList();
 		} finally {
 			_em.close();
 		}
-		return _listaAdmins;
+		return _listaProductos;
 
 	}
 
-	public void createAdmin(Administrador admin)  {
+	public List<Producto> findProductoPorEstado(int estado) {
+
+		try {
+			proxyCreateEntityManager();
+			Query query = _em.createNamedQuery("Producto.findByState",Producto.class);
+			query.setParameter("_varCat", estado);
+			query.setMaxResults(5);
+			_listaProductos = query.getResultList();
+		} finally {
+			_em.close();
+		}
+		return _listaProductos;
+
+	}
+
+	public void createProducto(Producto producto)  {
 
 		try {
 			proxyCreateEntityManager();
 			_em.getTransaction().begin();
-			_em.persist(admin);
+			_em.persist(producto);
 			_em.getTransaction().commit();
 		} catch (Exception ex) {
 			try {
@@ -88,13 +94,13 @@ public class AdminController {
 
 	}
 
-	public void deleteUsuario(Administrador admin)  {
+	public void deleteUsuario(Producto producto)  {
 
 		try {
 			proxyCreateEntityManager();
 			_em.getTransaction().begin();
-			admin = _em.merge(admin);
-			_em.remove(admin);
+			producto = _em.merge(producto);
+			_em.remove(producto);
 			_em.getTransaction().commit();
 		} catch (Exception ex) {
 			try {
@@ -111,12 +117,12 @@ public class AdminController {
 
 	}
 
-	public void updateUsuario(Administrador admin)  {
+	public void updateUsuario(Producto producto)  {
 
 		try {
 			proxyCreateEntityManager();
 			_em.getTransaction().begin();
-			admin = _em.merge(admin);
+			producto = _em.merge(producto);
 			_em.getTransaction().commit();
 		} catch (Exception ex) {
 			try {
