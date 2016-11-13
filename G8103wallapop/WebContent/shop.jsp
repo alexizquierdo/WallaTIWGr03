@@ -79,7 +79,7 @@
                         </div>
                         <h2><a href="single-product.jsp">Pulsera abalorios multicolor</a></h2>
                         <div class="product-carousel-price">
-                            <ins>5&euro;</ins>
+                            <ins>5&euro;</ins><del>10&euro;</del>
                         </div>  
                         
                                                
