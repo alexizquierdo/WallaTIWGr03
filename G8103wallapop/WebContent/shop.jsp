@@ -28,9 +28,9 @@
                         <div class="product-upper">
                             <img src="img/product-1.jpg" alt="">
                         </div>
-                        <h2><a href="single-product.jsp">Curso HTML5 + CSS3 + JS</a></h2>
+                        <h2><a href="single-product.jsp">Bicicleta de Paseo</a></h2>
                         <div class="product-carousel-price">
-                            <ins>349&euro;</ins> <del>599&euro;</del>
+                            <ins>150&euro;</ins>
                         </div>  
                                             
                     </div>
@@ -40,9 +40,9 @@
                         <div class="product-upper">
                             <img src="img/product-2.jpg" alt="">
                         </div>
-                        <h2><a href="single-product.jsp">Curso Android</a></h2>
+                        <h2><a href="single-product.jsp">Colgante hecho con botones</a></h2>
                         <div class="product-carousel-price">
-                            <ins>50&euro;</ins>
+                            <ins>20&euro;</ins>
                         </div>  
                                             
                     </div>
@@ -52,9 +52,9 @@
                         <div class="product-upper">
                             <img src="img/product-3.jpg" alt="">
                         </div>
-                        <h2><a href="single-product.jsp">Curso maquillaje</a></h2>
+                        <h2><a href="single-product.jsp">Bicicleta plegable el&eacute;ctrica</a></h2>
                         <div class="product-carousel-price">
-                            <ins>649&euro;</ins> <del>730&euro;</del>
+                            <ins>345&euro;</ins>
                         </div>  
                                               
                     </div>
@@ -64,9 +64,9 @@
                         <div class="product-upper">
                             <img src="img/product-4.jpg" alt="">
                         </div>
-                        <h2><a href="single-product.jsp">Curso ganchillo</a></h2>
+                        <h2><a href="single-product.jsp">Seat Ibiza 1997 Azul</a></h2>
                         <div class="product-carousel-price">
-                            <ins>43,50&euro;</ins>
+                            <ins>1000&euro;</ins>
                         </div>  
                         
                                               
@@ -77,9 +77,9 @@
                         <div class="product-upper">
                             <img src="img/product-5.jpg" alt="">
                         </div>
-                        <h2><a href="single-product.jsp">Curso Office 2015</a></h2>
+                        <h2><a href="single-product.jsp">Pulsera abalorios multicolor</a></h2>
                         <div class="product-carousel-price">
-                            <ins>67&euro;</ins> <del>119,90&euro;</del>
+                            <ins>5&euro;</ins>
                         </div>  
                         
                                                
@@ -90,9 +90,9 @@
                         <div class="product-upper">
                             <img src="img/product-6.jpg" alt="">
                         </div>
-                        <h2><a href="single-product.jsp">Curso animaci&oacute;n 3D</a></h2>
+                        <h2><a href="single-product.jsp">Conjunto pendientes y anillo</a></h2>
                         <div class="product-carousel-price">
-                            <ins>400&euro;</ins>
+                            <ins>15&euro;</ins>
                         </div>  
                         
                                                
@@ -103,9 +103,9 @@
                         <div class="product-upper">
                             <img src="img/product-7.jpg" alt="">
                         </div>
-                        <h2><a href="single-product.jsp">Clases de Matemáticas</a></h2>
+                        <h2><a href="single-product.jsp">Hyundai Trajet Diesel 7 plazas</a></h2>
                         <div class="product-carousel-price">
-                            <ins>120&euro;</ins> <del>155&euro;</del>
+                            <ins>3000&euro;</ins> <del>3500&euro;</del>
                         </div>  
                         
                                                
