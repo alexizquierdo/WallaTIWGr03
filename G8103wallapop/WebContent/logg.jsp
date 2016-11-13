@@ -53,8 +53,14 @@
 								placeholder="Nombre" name="nombre" /></li>
 									<li><input type="apellidos" required class="input"
 								placeholder="Apellidos" name="apellidos" /></li>
-									<li><input type="ciudad" required class="input"
-								placeholder="Ciudad" name="ciudad"/></li>
+									<li>Ciudad</li>
+									<li><select name="ciudad">
+									<option value="1">Madrid</option>
+									<option value="2">Barcelona</option>
+									<option value="3">Valencia</option>
+									<option value="4">Sevilla</option>
+									<option value="5">Bilbao</option>
+									</select></li>
 							<li>
 								<input type="checkbox" id="check1" name="terminos"> 
 								<label for="check1">I accept terms and conditions</label>

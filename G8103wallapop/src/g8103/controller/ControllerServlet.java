@@ -48,45 +48,59 @@ public class ControllerServlet extends HttpServlet {
 		//HttpSession sesion = request.getSession();
 		String user = request.getParameter("user");
 		String pwd = request.getParameter("pwd");
-		
+		String name = request.getParameter("nombre");
 		//Búsqueda administrador
-		
+
 		AdminController _admin = new AdminController("G8103Database");
 		Administrador admin = _admin.findAdminByMail(user);
 		if(admin != null){
 			System.out.println("Administrador encontrado");
+			if(name == null){
 			//Redirigir página administrador
 			if(admin.getPassword().equals(pwd)){
 				System.out.println("Contraseña correcta");
+				
 			}else{
 				System.out.println("Contraseña incorrecta");
+				RequestDispatcher miR = request
+						.getRequestDispatcher("/logg.jsp");
+				miR.forward(request, response);
 			}
-		}
-		
-		//Búsqueda usuario normal
-		
-		UsuarioController _usuario = new UsuarioController("G8103Database");
-		_usuario.findUsuarioByMail(user);
-		
-		if(_usuario == null){
-			String name = request.getParameter("nombre");
-			String apellidos = request.getParameter("apellidos");
-			String ciudad = request.getParameter("ciudad");
-			Usuario newUser = new Usuario(user, pwd, name, apellidos, 1);
+			}else{
+				System.out.println("Usuario ya existente");
+				RequestDispatcher miR = request
+						.getRequestDispatcher("/logg.jsp");
+				miR.forward(request, response);
+			}
+		}else{
 
-			//Añadir usuario a base de datos
+			//Búsqueda usuario normal
 
-			_usuario.createUsuario(newUser);
+			UsuarioController _usuario = new UsuarioController("G8103Database");
+			_usuario.findUsuarioByMail(user);
+			
+			if(_usuario == null && name == null){
+				String apellidos = request.getParameter("apellidos");
+				int ciudad = Integer.parseInt(request.getParameter("ciudad"));
+				Usuario newUser = new Usuario(user, pwd, name, apellidos, ciudad);
 
+				//Añadir usuario a base de datos
 
+				_usuario.createUsuario(newUser);
 
+				RequestDispatcher miR = request
+						.getRequestDispatcher("/index.jsp");
+				miR.forward(request, response);
+
+			}else{
+				RequestDispatcher miR = request
+						.getRequestDispatcher("/logg.jsp");
+				miR.forward(request, response);
+				
+			}
+			
 		}
 		//Devolver control a index.jsp
-		
-		RequestDispatcher miR = request
-				.getRequestDispatcher("/index.jsp");
-		miR.forward(request, response);
-			
 		
 	}
 
