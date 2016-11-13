@@ -6,17 +6,17 @@
   <body>
    	<%@include file="header.jsp" %>
    	
-   	<div class="slider-area">
+   	<div class="sliders-area">
         <div class="zigzag-bottom"></div>
-        <div id="slide-list" class="carousel carousel-fade slide" data-ride="carousel">
+        <div id="slides-list" class="carousel carousel-fade slides" data-ride="carousel">
             
-            <div class="slide-bulletz">
+            <div class="slides-bulletz">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <ol class="carousel-indicators slide-indicators">
-                                <li data-target="#slide-list" data-slide-to="1" class="active"></li>
-                                <li data-target="#slide-list" data-slide-to="2"></li>
+                                <li data-target="#slides-list" data-slides-to="1" class="active"></li>
+                                <li data-target="#slides-list" data-slides-to="2"></li>
                             </ol>                            
                         </div>
                     </div>
@@ -25,14 +25,14 @@
 
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <div class="single-slide">
-                        <div class="slide-bg slide-one"></div>
-                        <div class="slide-text-wrapper">
-                            <div class="slide-text">
+                    <div class="single-slides">
+                        <div class="slides-bg slides-one"></div>
+                        <div class="slides-text-wrapper">
+                            <div class="slides-text">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-6 col-md-offset-6">
-                                            <div class="slide-content">
+                                            <div class="slides-content">
                                                 <h2>&iexcl;Compra desde casa!</h2>
                                                 <p>WallaTIW pone a tu disposici&oacute;n una infinidad de productos on-line. La gran variedad
 						de la que disponemos te asegura encontrar cualquier art&iacute;culo seg&uacute;n tus necesidades.</p>
