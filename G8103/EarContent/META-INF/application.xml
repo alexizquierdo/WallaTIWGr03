@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_7.xsd" id="Application_ID" version="7">
-  <display-name>G8103</display-name>
+  <display-name>G8103-Static</display-name>
   <module>
     <web>
-      <web-uri>G8103admon.war</web-uri>
-      <context-root>G8103admon</context-root>
+      <web-uri>G8103admon-static.war</web-uri>
+      <context-root>G8103admon-static</context-root>
     </web>
   </module>
   <module>
     <web>
-      <web-uri>G8103wallapop.war</web-uri>
-      <context-root>G8103wallapop</context-root>
+      <web-uri>G8103wallapop-static.war</web-uri>
+      <context-root>G8103wallapop-static</context-root>
     </web>
   </module>
 </application>

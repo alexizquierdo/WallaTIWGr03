@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>G8103</name>
+	<name>G8103-Static</name>
 	<comment></comment>
 	<projects>
-		<project>G8103admon</project>
-		<project>G8103wallapop</project>
-		<project>G8103Database</project>
+		<project>G8103admon-static</project>
+		<project>G8103Database-static</project>
+		<project>G8103wallapop-static</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
